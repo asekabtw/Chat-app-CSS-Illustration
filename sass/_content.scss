@@ -1,0 +1,89 @@
+.content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(270, 20%, 96%);
+    position: relative;
+    overflow: hidden;
+
+    &__wrapper {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4em;
+        z-index: 2;
+        padding: 60px 0;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 900px;
+        height: 100%;
+        z-index: 0;
+    }
+
+    &::before {
+        background-image: linear-gradient(
+            to bottom,
+            hsl(289, 100%, 72%),
+            $right-gradient
+        );
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        right: 50%;
+        bottom: 40%;
+    }
+
+    &::after {
+        background-color: hsla(276, 100%, 81%, 0.049);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .content {
+        &__wrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 5em;
+        }
+
+        &::before {
+            right: 65%;
+            bottom: 10%;
+        }
+
+        &::after {
+            left: 65%;
+            top: 10%;
+        }
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .content {
+        &__wrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 10em;
+        }
+
+        &::before {
+            right: 65%;
+            bottom: 10%;
+        }
+
+        &::after {
+            left: 65%;
+            top: 10%;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import "./colors";
+@import "./content";
+@import "./phone";
+@import "./attribution";
+@import "./name";
+@import "./chat";
+@import "./text";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
